@@ -1,5 +1,5 @@
 package com.bridgelabz;
-import java .util.Scanner;
+
 public class Contact {
     public String firstName;
     public String lastName;
@@ -74,23 +74,5 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
-    Scanner sc = new Scanner(System.in);
-    public void setContactDetails() {
-        System.out.print(" Enter First Name : ");
-        setFirstName(sc.nextLine());
-        System.out.print(" Enter Last Name : ");
-        setLastName(sc.nextLine());
-        System.out.print(" Enter Address : ");
-        setAddress(sc.nextLine());
-        System.out.print(" Enter city : ");
-        setCity(sc.nextLine());
-        System.out.print(" Enter State : ");
-        setState(sc.nextLine());
-        System.out.print(" Enter Zip Code : ");
-        setZipCode(sc.nextLine());
-        System.out.print(" Enter Phone Number : ");
-        setPhoneNo(sc.nextLine());
-        System.out.print(" Enter Email : ");
-        setEmail(sc.nextLine());
-    }
+
 }
