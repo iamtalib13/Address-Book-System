@@ -68,4 +68,26 @@ public class AddressBook {
             contacts.setEmail(sc8.next());
         }
     }
+
+    public void deleteContact() {
+        //Get First Name to Edit the Contact
+        System.out.println("Enter the First Name : ");
+        String firstName = sc.next();
+
+        //check if the Given User with First Name
+        if (!firstName.equalsIgnoreCase(contacts.getFirstName())) {
+            System.out.println("The Entered Contact Name is Not Available in Address Book");
+        } else {
+            contacts.setFirstName(null);
+            contacts.setLastName(null);
+            contacts.setAddress(null);
+            contacts.setZipCode(null);
+            contacts.setState(null);
+            contacts.setCity(null);
+            contacts.setEmail(null);
+            contacts.setPhoneNo(null);
+        }
+
+
+    }
 }
