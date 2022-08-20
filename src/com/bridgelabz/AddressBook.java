@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook {
-    //Scanner object for User Input
+
     Scanner sc = new Scanner(System.in);
     int choice;
 
     ArrayList<Contact> contactList = new ArrayList<>();
 
-    //Method to Add New Contact to AddressBook
+
     public void addNewContact() {
         Contact contacts = new Contact();
         System.out.println("Enter the Contact Details -");
@@ -33,7 +33,7 @@ public class AddressBook {
         contactList.add(contacts);
     }
 
-    //Method to Show the Contact Details
+
     public void displayContact() {
         for (Contact contact : contactList) {
             if (contact.getFirstName() == null) {
@@ -49,13 +49,12 @@ public class AddressBook {
         }
     }
 
-    //Method to Edit the Existing Contact
     public void editContact() {
-        //Get First Name to Edit the Contact
+
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
 
-        //check if the Given User with First Name
+
         boolean isAvailable = false;
         for (Contact contact : contactList) {
             if (firstName.equalsIgnoreCase(contact.getFirstName())) {
@@ -82,13 +81,12 @@ public class AddressBook {
         }
     }
 
-    //Method to Delete the Existing Contact
     public void deleteContact() {
-        //Get First Name to Edit the Contact
+
         System.out.println("Enter the First Name : ");
         String firstName = sc.next();
 
-        //check if the Given User with First Name
+
         boolean isAvailable = false;
         for (Contact contact : contactList) {
             if (firstName.equalsIgnoreCase(contact.getFirstName())) {
@@ -104,7 +102,7 @@ public class AddressBook {
     }
 
     public void contactOptions(AddressBook addressBook) {
-        //Show Menu for user to Select Operation on AddressBook
+
         do {
             System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
             System.out.println("1. ADD NEW CONTACT\n2. EDIT CONTACT\n3. DELETE CONTACT" +

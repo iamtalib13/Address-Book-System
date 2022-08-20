@@ -9,8 +9,12 @@ public class AddressBookMain {
 
         do {
             System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
-            System.out.println("1. ADD NEW ADDRESSBOOK\n2. EDIT ADDRESSBOOK\n3. DELETE ADDRESSBOOK" +
-                    "\n4. DISPLAY ADDRESSBOOKS\n5. SELECT ADDRESSBOOK\n6. EXIT");
+            System.out.println("1. ADD NEW ADDRESSBOOK");
+            System.out.println("2. EDIT ADDRESSBOOK");
+            System.out.println("3. DELETE ADDRESSBOOK");
+            System.out.println("4. DISPLAY ADDRESSBOOKS");
+            System.out.println("5. SELECT ADDRESSBOOK");
+            System.out.println("6. EXIT");
             System.out.println("Please Select the Operation Number : ");
             choice = AddressBookNew.userInput();
 
