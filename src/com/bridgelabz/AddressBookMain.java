@@ -5,41 +5,39 @@ public class AddressBookMain {
 
         System.out.println("Welcome to Address Book System Problem.");
 
-        int option = 0;
-
-        AddressBook addressBook = new AddressBook();
+        int choice;
 
         do {
-            System.out.println("1. ADD NEW PERSON DETAILS");
-            System.out.println("2. SHOW PERSON DETAILS");
-            System.out.println("3. EDIT PERSON DETAILS");
-            System.out.println("4. DELETE PERSON DETAILS");
-            System.out.println("5. EXIT ADDRESS BOOK");
+            System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
+            System.out.println("1. ADD NEW ADDRESSBOOK\n2. EDIT ADDRESSBOOK\n3. DELETE ADDRESSBOOK" +
+                    "\n4. DISPLAY ADDRESSBOOKS\n5. SELECT ADDRESSBOOK\n6. EXIT");
+            System.out.println("Please Select the Operation Number : ");
+            choice = AddressBookNew.userInput();
 
-            System.out.println("Please Select the Program : ");
-            option = addressBook.sc.nextInt();
-
-            switch (option) {
+            switch (choice) {
                 case 1:
-                    addressBook.addNewContact();
+                    AddressBookNew.addNewAddressBook();    //Adding New Address Book to System
                     break;
                 case 2:
-                    addressBook.showContact();
+                    //Edit Address Book Details
+                    //addressBook.editContact();
                     break;
                 case 3:
-                    addressBook.editContact();
+                    AddressBookNew.deleteAddressBook();    //Delete the Address Book Details
                     break;
                 case 4:
-                    addressBook.deleteContact();
+                    AddressBookNew.displayAddressBooks();  //Show Contact Details
                     break;
                 case 5:
-                    System.out.println("Exit - Thank You ");
+                    AddressBookNew.selectAddressBook();
+                    break;
+                case 6:
+                    System.out.println("Thank You for using Address Book System.");
                     break;
                 default:
-                    System.out.println("Please Select the Valid Program");
+                    System.out.println("Please Select the Operation between 1 to 6 only.");
                     break;
             }
-        } while (option != 5);
-
+        }while( choice != 6 );
     }
 }
